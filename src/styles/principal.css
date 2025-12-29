@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+	--fundo: #f9f9f9;
+	--cards: #fff;
+	--botao-cta: #5ebbd6;
+	--detalhes-rosa: #f6b0ce;
+	--texto: #546e7a;
+}
+
+.botao {
+	background-color: var(--botao-cta);
+	color: var(--cards);
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: 600;
+}
+.botao:hover {
+	background-color: var(--detalhes-rosa);
+	color: var(--cards);
+	cursor: pointer;
+}
+
+body {
+	background: linear-gradient(to bottom, #f9f9f9, #f6b0ce);
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	background-color: var(--cards);
+	width: 300px;
+
+	margin: 0;
+	padding: 1rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	overflow: visible;
+	transform: translateY(30px);
+}
+
+header div {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+header img {
+	width: 120px; /* Tamanho fixo é necessário */
+	height: 120px; /* Altura igual a largura */
+	border-radius: 50%; /* Deixa redonda */
+	object-fit: cover; /* Garante que a foto não fique achatada */
+
+	/* O TRUQUE DA BORDA: */
+	margin-top: -70px; /* Sobe metade da altura (60px) + 10px de padding do card */
+	border: 5px solid var(--fundo); /* Cria uma borda da cor do fundo da página */
+	background-color: var(--cards); /* Garante fundo caso a img falhe */
+}
+
+.menulinks {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-top: 1rem;
+	gap: 1.5rem;
+	align-items: stretch;
+}
+
+.fotografia {
+	border-radius: 50%;
+	position: absolute;
+}
+
+.titulo-perfil {
+	text-align: center; /* Centraliza o texto */
+	margin-top: 3.5rem; /* Empurra o nome para baixo para não bater na foto */
+	margin-bottom: 1rem; /* Espaço entre o nome e os botões */
+
+	/* Configuração para deixar o ícone alinhado com o texto */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px; /* Espacinho entre o nome e o ícone */
+}
+
+.titulo-perfil h1 {
+	font-size: 1.6rem; /* Tamanho da fonte do nome */
+	color: var(--detalhes-rosa); /* Usa a cor de texto definida nas variáveis */
+	font-weight: 600; /* Deixa o nome em negrito */
+	font-family: 'Montserrat', sans-serif;
+}
+
+.icone-verificado {
+	color: #1da1f2; /* Azul padrão de verificado (ou use var(--botao-cta)) */
+	font-size: 1rem; /* Tamanho do ícone */
+}
