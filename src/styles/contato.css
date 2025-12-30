@@ -1,0 +1,26 @@
+body {
+	background-color: var(--fundo);
+	color: var(--texto);
+}
+
+.contato {
+	display: flex;
+	flex-direction: column;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--card);
+	border: 2px solid var(--borda);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	border-radius: 10px;
+	transition: transform 0.3s, box-shadow 0.3s;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 1.5rem;
+}
+.formas-contato {
+	text-align: center;
+}
