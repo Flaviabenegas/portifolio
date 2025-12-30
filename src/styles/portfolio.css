@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
-
+@import 'sobre.css';
 * {
 	margin: 0;
 	padding: 0;
@@ -51,7 +51,14 @@
 	text-transform: uppercase;
 	font-size: small;
 	color: var(--texto);
+	display: inline-block;
 }
+
+.links:hover {
+	transform: scale(1.1);
+	font-weight: bold;
+}
+
 .menu {
 	display: flex;
 	flex-direction: row;

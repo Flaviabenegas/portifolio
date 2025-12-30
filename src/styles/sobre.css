@@ -1,0 +1,20 @@
+.sobre {
+	display: flex;
+	align-items: center;
+	width: 65vw;
+	margin: 0 auto;
+	height: 50vh;
+}
+
+.sobre-content {
+	padding: 0 0.5rem;
+	text-align: left;
+	color: var(--texto);
+}
+
+.icones {
+	color: var(--detalhes-rosa);
+}
+.seguir {
+	font-weight: 700;
+}
