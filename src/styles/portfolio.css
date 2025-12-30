@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+	--fundo: #f9f9f9;
+	--cards: #fff;
+	--botao-cta: #5ebbd6;
+	--detalhes-rosa: #f6b0ce;
+	--texto: #546e7a;
+}
+
+.botao {
+	background-color: var(--botao-cta);
+	color: var(--cards);
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: 600;
+}
+.botao:hover {
+	background-color: var(--detalhes-rosa);
+	color: var(--cards);
+	cursor: pointer;
+}
+.menuLinks {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	margin-top: 2rem;
+	align-items: flex-end;
+	position: fixed;
+}
+
+.links {
+	text-decoration: none;
+	justify-content: flex-end;
+	gap: 2rem;
+	cursor: pointer;
+	padding: 0 1rem;
+	align-items: flex-end;
+	text-transform: uppercase;
+	font-size: small;
+	color: var(--texto);
+}
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
