@@ -110,6 +110,9 @@ const portfolio = [
 
 const botoes = document.querySelectorAll('.filtro-btn')
 const galeria = document.querySelector('.gallery-container')
+const modal = document.getElementById('visualizador-modal')
+const imgAmpliada = document.getElementById('img-ampliada')
+const fecharModal = document.querySelector('.fechar-modal')
 
 
 function filtrarFotos(tag) {
@@ -121,13 +124,46 @@ function filtrarFotos(tag) {
 
 function mostrarFotos(fotos) {
     limparGaleria()
+    if (modal) {
+        fecharModal.addEventListener('click', () => {
+            modal.style.display = 'none'
+            imgAmpliada.src = ''
+        })
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none'
+                imgAmpliada.src = ''
+            }
+        })
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none'
+                imgAmpliada.src = ''
+            }
+        })
+    }
     fotos.forEach(foto => {
         const img = document.createElement('img')
+        img.addEventListener('click', () => {
+            modal.style.display = 'flex'
+            imgAmpliada.src = foto.img
+        })
         img.src = foto.img
         img.alt = `Foto da categoria ${foto.categoria}`
         galeria.appendChild(img)
     })
+
 }
+
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') {
+        modal.style.display = 'none'
+        imgAmpliada.src = ''
+    }
+})
 
 function limparGaleria() {
     galeria.innerHTML = ''
@@ -167,25 +203,4 @@ if (categoriaSolicitada === null) {
     mostrarFotos(filtrarFotos(categoriaSolicitada))
 
 }
-
-
-
-const paginaSobre = document.getElementById('sobre')
-sobre.addEventListener('click', () => {
-    window.location.href = 'sobre.html'
-})
-
-const paginaContato = document.getElementById('contato')
-contato.addEventListener('click', () => {
-    window.location.href = 'contato.html'
-})
-
-const paginaHome = document.getElementById('home')
-home.addEventListener('click', () => {
-    window.location.href = 'portifolio.html'
-})
-
-
-
-mostrarFotos(portfolio)
 

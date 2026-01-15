@@ -84,3 +84,53 @@
 	font-size: inherit;
 	cursor: pointer;
 }
+/* O Fundo Escuro (Container) */
+#visualizador-modal {
+	position: fixed; /* O que escolheste! */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9); /* Preto 90% opaco */
+	z-index: 1000; /* Garante que fica EM CIMA de tudo */
+
+	/* Flexbox para centralizar a imagem no meio do ecrã */
+	display: none; /* Começa escondido! */
+	justify-content: center;
+	align-items: center;
+	animation-name: aparecerSuave;
+	animation-duration: 0.5s;
+}
+
+/* A Imagem Ampliada */
+.modal-imagem {
+	max-width: 90%; /* Não deixa a imagem sair do ecrã */
+	max-height: 90%;
+	border: 3px solid white; /* Uma moldura elegante */
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* O Botão de Fechar (X) */
+.fechar-modal {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.fechar-modal:hover {
+	color: var(--detalhes-rosa); /* Usa a tua cor personalizada */
+}
+
+@keyframes aparecerSuave {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
