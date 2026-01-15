@@ -65,3 +65,22 @@
 	justify-content: space-between;
 	align-items: center;
 }
+
+.btn-filtro.active {
+	background-color: #f6b0ce; /* Sua cor rosa da marca */
+	color: white;
+	border: 1px solid #f6b0ce;
+}
+.filtro-btn {
+	cursor: pointer;
+	padding: 0 1rem;
+	align-items: flex-end;
+	text-transform: uppercase;
+	font-size: small;
+	color: var(--texto);
+	border: none;
+	background: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+}
