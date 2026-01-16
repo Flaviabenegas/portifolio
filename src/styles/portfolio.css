@@ -121,6 +121,9 @@
 	cursor: pointer;
 	transition: 0.3s;
 }
+.links-menu {
+	display: flex;
+}
 
 .fechar-modal:hover {
 	color: var(--detalhes-rosa); /* Usa a tua cor personalizada */
@@ -132,5 +135,91 @@
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+#menu-hamburger {
+	font-size: 32px;
+	color: var(--texto);
+	cursor: pointer;
+	display: none; /* Escondido por padrão */
+}
+
+@media (max-width: 768px) {
+	#menu-hamburger {
+		font-size: 32px;
+		color: var(--texto);
+		cursor: pointer;
+		display: block; /* Escondido por padrão */
+	}
+
+	/* 1. MENU: Transforma a barra horizontal numa coluna vertical */
+	.menu {
+		flex-direction: row; /* Alinha horizontalmente (Logo | Hambúrguer) */
+		flex-wrap: wrap; /* Permite que os links "caiam" para a linha de baixo */
+		justify-content: space-between; /* Empurra o Logo para a esq. e o Ícone para a dir. */
+		align-items: center; /* Alinha o centro verticalmente */
+		padding: 15px 20px; /* Espaçamento interno */
+	}
+
+	.links-menu {
+		flex-direction: column; /* Botões um embaixo do outro */
+		gap: 10px; /* Espaço entre botões */
+		margin-top: 15px;
+		width: 100%;
+		display: none;
+	}
+
+	.filtro-btn {
+		width: 80%; /* Botões mais largos para facilitar o toque */
+		margin: 0 auto; /* Centralizar os botões */
+		padding: 12px; /* Área de toque maior */
+	}
+
+	/* 2. GALERIA: Apenas 1 coluna de fotos no celular */
+	.gallery-container {
+		grid-template-columns: 1fr; /* Uma foto por linha */
+		gap: 15px;
+		padding: 10px;
+	}
+
+	/* 3. PÁGINA SOBRE: Foto em cima, texto embaixo */
+	.sobre {
+		flex-direction: column;
+		padding: 20px;
+		height: auto; /* Remove altura fixa se houver */
+	}
+
+	.sobre .imagem img {
+		width: 150px; /* Foto menor e redonda no topo */
+		height: 150px;
+		margin-bottom: 20px;
+	}
+
+	.sobre-content {
+		width: 100%; /* Texto ocupa a largura toda */
+		text-align: center; /* Texto centralizado fica bonito no mobile */
+	}
+
+	/* 4. PÁGINA CONTATO: Mapa e info empilhados */
+	.contato {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.contato iframe {
+		height: 250px; /* Mapa mais baixo para não ocupar a tela toda */
+		margin-bottom: 20px;
+	}
+
+	.card {
+		width: 90%; /* Card de contatos ocupa quase toda a largura */
+		margin: 0 auto 30px auto;
+	}
+
+	/* 5. MODAL: Ajuste da foto ampliada */
+	.modal-imagem {
+		max-width: 90%; /* Garante margem nas laterais */
+		max-height: 80%;
 	}
 }
