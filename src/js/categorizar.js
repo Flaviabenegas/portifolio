@@ -30,22 +30,22 @@ const portfolio = [
     {
         id: 6,
         categoria: 'aniversarios',
-        img: 'https://images.unsplash.com/photo-1530103862676-de3c9a59af57?w=500&q=80'
+        img: 'src/fotos/aniversario (1).jpg'
     },
     {
         id: 7,
         categoria: 'aniversarios',
-        img: 'https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=500&q=80'
+        img: 'src/fotos/aniversario (2).jpg'
     },
     {
         id: 8,
         categoria: 'aniversarios',
-        img: 'https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=500&q=80'
+        img: 'src/fotos/aniversario (3).jpg'
     },
     {
         id: 9,
         categoria: 'aniversarios',
-        img: 'https://images.unsplash.com/photo-1527481138388-318cd7a10d46?w=500&q=80'
+        img: 'src/fotos/aniversario (4).jpg'
     },
     {
         id: 10,
